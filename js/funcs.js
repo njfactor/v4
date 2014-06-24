@@ -103,21 +103,23 @@ function addEntry()
 	qt_input.setAttribute("type",'text');
 	qt_input.setAttribute("value",'1');
 	qt_input.setAttribute("id","quan");
-	qt_input.setAttribute("size","1%");
+	qt_input.setAttribute("size","2%");
+
 	
 	var rm_button = document.createElement('input');
 	rm_button.setAttribute("type",'image');
 	rm_button.setAttribute("id",'remove');
-	rm_button.setAttribute("height",'30px');
+	rm_button.setAttribute("height",'40px');
 	rm_button.setAttribute("src",'delete_button.jpg');
 	rm_button.setAttribute("onclick",'cart[cart_top-1].remove_item()');
 	
 	var onlycost = document.createElement('div');
-	onlycost.innerHTML = "Total: " + cart[cart_top-1].pdPrice;
+	onlycost.innerHTML = "ST: " + cart[cart_top-1].pdPrice;
 	prdetails_temp.innerHTML = cart[cart_top-1].pdName + "<br />ID: " + cart[cart_top-1].pdId + "<br />MRP: " + cart[cart_top-1].pdPrice;
+	prcost_temp.appendChild(rm_button);
 	prcost_temp.appendChild(qt_input);
 	prcost_temp.appendChild(onlycost);
-	prcost_temp.appendChild(rm_button);
+	
 	//prcost_temp.innerHTML = "<br/>&nbspCost: " + cart[cart_top-1].pdPrice;
 	
 	prdiv.appendChild(primg_temp);
