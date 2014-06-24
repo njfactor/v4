@@ -58,7 +58,8 @@ var app = {
 
         scanner.scan( function (result) 
 		{ 
-	
+			if(result.text != "")
+			{
 			splitter(1,result.text);
             alert("We got a barcode\n" + "Result: " + result.text);  
             console.log("Scanner result: \n" +
@@ -72,7 +73,7 @@ var app = {
                 window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
             }
             */
-
+			}
         }, function (error) { 
             console.log("Scanning failed: ", error); 
         } );
