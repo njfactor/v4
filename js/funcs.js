@@ -95,7 +95,7 @@ function addEntry()
 	prcost_temp.className='prcost';
 	
 	var temp_pd = document.createElement('img');
-	temp_pd.setAttribute("height",'70px');
+	temp_pd.setAttribute("height",'125px');
 	temp_pd.setAttribute("src",'temp_pd.jpg');
 	primg_temp.appendChild(temp_pd);
 	
