@@ -21,6 +21,9 @@ function remove_object()
 	temp_arr_start.pop();
 
 	cart=temp_arr_start.concat(temp_arr_end);
+	
+	
+	
 }
 //end
 
@@ -83,8 +86,49 @@ function addEntry()
 	var prdiv= document.createElement('div');
 	prdiv.className='container';	
 	prdiv.id=cart[cart_top-1].SrNo;
-	document.getElementById('cart')[0].appendChild(prdiv);
 	
+	var primg_temp = document.createElement('div');
+	primg_temp.className='primg';
+	var prdetails_temp = document.createElement('div');
+	prdetails_temp.className='prdetails';
+	var prcost_temp = document.createElement('div');
+	prcost_temp.className='prcost';
+	
+	var temp_pd = document.createElement('img');
+	temp_pd.setAttribute("height",'70px');
+	temp_pd.setAttribute("src",'temp_pd.jpg');
+	primg_temp.appendChild(temp_pd);
+	
+	var qt_input = document.createElement('input');
+	qt_input.setAttribute("type",'text');
+	qt_input.setAttribute("value",'1');
+	qt_input.setAttribute("id","quan");
+	qt_input.setAttribute("size","1%");
+	
+	var rm_button = document.createElement('input');
+	rm_button.setAttribute("type",'image');
+	rm_button.setAttribute("id",'remove');
+	rm_button.setAttribute("height",'30px');
+	rm_button.setAttribute("src",'delete_button.jpg');
+	rm_button.setAttribute("onclick",'cart[cart_top-1].remove_item()');
+	
+	var onlycost = document.createElement('div');
+	onlycost.innerHTML = "Total: " + cart[cart_top-1].pdPrice;
+	prdetails_temp.innerHTML = cart[cart_top-1].pdName + "<br />ID: " + cart[cart_top-1].pdId + "<br />MRP: " + cart[cart_top-1].pdPrice;
+	prcost_temp.appendChild(qt_input);
+	prcost_temp.appendChild(onlycost);
+	prcost_temp.appendChild(rm_button);
+	//prcost_temp.innerHTML = "<br/>&nbspCost: " + cart[cart_top-1].pdPrice;
+	
+	prdiv.appendChild(primg_temp);
+	prdiv.appendChild(prdetails_temp);
+	prdiv.appendChild(prcost_temp);
+	
+	var break_temp= document.createElement('div');
+	break_temp.innerHTML = "<br/>";
+	
+	document.getElementById('cart').appendChild(prdiv);
+	document.getElementById('cart').appendChild(break_temp);
 	
  }
  //end
