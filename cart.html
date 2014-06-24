@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="barcodescanner.js"></script>
+	<script type="text/javascript" src="childbrowser.js"></script>
+	<script type="text/javascript" src="js/barcode.js"></script>
+	<script type="text/javascript">app.initialize();</script>
+
+		<!-- These are for the scanner -->
+	
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+
+	<!-- These are our scripts -->
+	<script type="text/javascript" src="js/funcs.js"></script>
+	
+	
+	
+<style type="text/css">
+	body{background-color:#473C8B;}
+	#clickers{text-align:center; 
+	position:fixed;
+    padding:0;
+    margin:0;
+    left:0;
+    top:0;
+    width: 100%;
+    background:#cc6666;}	
+	#cart{position:relative;
+	top:60px;
+	z-index:-1;}
+	
+
+	b{color:#473C8B;}
+
+</style>
+</head>
+<body>
+
+	<div id="clickers" style="top:0; position:fixed" class="app">
+		<div id="deviceready" class="blink"></div>
+		<a href="#" class="topcoat-button" id="scan"><button>Add</button></a>
+		<button onClick = ""/>Pay</button>
+		<button onClick = ""/>Exit</button><br/>
+		<em>&nbsp&nbsp0000Rs</em>
+		<em>&nbsp&nbspItems listed:&nbsp&nbsp&nbsp</em>
+		<p> <span></span><p>
+	</div>
+	<p>  </p>
+<div id="cart">
+	<div class="container" >
+		<div class="primg">
+		<img src="shampoo.jpg" height="70px"/>
+		</div>
+		<div class="prdetails">
+		Name<br/>
+		Id<br/>
+		MRP<br/>
+		
+		</div>
+		<div class="prcost">
+		<input type="text" value="Quantity" id="quan" size="1%"><br/>
+		&nbspCost:<br/>
+		
+		<input type="image" src="button.jpg"  id="remove" onClick="" height="30px" />
+		</div>
+	</div>
+	<b>break</b>
+	
+
+</div>	
+<script>
+var details=[];//temporary array to hold the info properties in string form 
+var total_price=0;//total to be paid
+var cart=[];//array of objects;
+var cart_top=0;//same as sr no.
+</script>
+
+</body>
+</html>
