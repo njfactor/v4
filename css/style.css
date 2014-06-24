@@ -28,4 +28,23 @@
 
 
 
-}
+}	
+body{background-color:#473C8B;}
+	
+#clickers
+	{text-align:center; 
+	position:fixed;
+    padding:0;
+    margin:0;
+    left:0;
+    top:0;
+    width: 100%;
+    background:#cc6666;}	
+	
+#cart
+	{position:relative;
+	top:60px;
+	z-index:-1;}
+	
+
+b{color:#473C8B;}
