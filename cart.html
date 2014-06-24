@@ -2,11 +2,6 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<script type="text/javascript" src="cordova.js"></script>
-	<script type="text/javascript" src="barcodescanner.js"></script>
-	<script type="text/javascript" src="childbrowser.js"></script>
-	<script type="text/javascript" src="js/barcode.js"></script>
-	<script type="text/javascript">app.initialize();</script>
 
 		<!-- These are for the scanner -->
 	
@@ -29,7 +24,7 @@
 		<button onClick = ""/>Pay</button>
 		<button onClick = ""/>Exit</button><br/>
 		<em>&nbsp&nbsp0000Rs</em>
-		<em>&nbsp&nbspItems listed:&nbsp&nbsp&nbsp</em>
+		<em>&nbsp&nbspItems listed:&nbsp&nbsp&nbsp </em>
 		<p> <span></span><p>
 	</div>
 	<p>  </p>
@@ -55,6 +50,12 @@
 	
 
 </div>	
+<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="barcodescanner.js"></script>
+	<script type="text/javascript" src="childbrowser.js"></script>
+	<script type="text/javascript" src="js/barcode.js"></script>
+	<script type="text/javascript">app.initialize();</script>
+
 <script>
 var details=[];//temporary array to hold the info properties in string form 
 var total_price=0;//total to be paid
